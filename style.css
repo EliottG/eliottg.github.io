@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+
+}
+
+.btn-default {
+    border-radius: 40px;
+    width: 10em;
+    text-align: center;
+}
+.btn-default:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#profil-picture {
+    clip-path: polygon(0 6%, 100% 6%, 100% 90%, 0 90%);
+
+}
+.header-content {
+    color: rgb(66, 66, 66);
+}
+/* FORM */
+
+.modal-body form div input {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgb(163, 163, 163);
+    padding: 0;
+    
+}
+input[type="text"],[type="email"],[type="tel"],  textarea {
+    outline: none;
+    box-shadow:none !important;
+}
+
