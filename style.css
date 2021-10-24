@@ -8,8 +8,6 @@ font-family: 'Ubuntu', sans-serif;
 
 .btn-default {
     border-radius: 40px;
-    width: 10em;
-    text-align: center;
 }
 .btn-default:hover {
     opacity: 0.9;
@@ -23,17 +21,11 @@ font-family: 'Ubuntu', sans-serif;
 .header-content {
     color: rgb(66, 66, 66);
 }
-/* FORM */
 
-.modal-body form div input {
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid rgb(163, 163, 163);
-    padding: 0;
-    
-}
-input[type="text"],[type="email"],[type="tel"],  textarea {
-    outline: none;
-    box-shadow:none !important;
-}
+/* ABOUT-ME */
+@media screen and (max-width: 1199px) {
 
+    #about-me #img-about-me {
+        display: none;
+    }
+}
