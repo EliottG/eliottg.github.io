@@ -60,7 +60,14 @@ nav img:hover {
     }
 }
 
-/* CANVAS */
+/* GAME */
 canvas {
-    background-color: rgb(235, 235, 235);
+    border: 3px solid gray;
+    position: relative;
 }
+  
+  @media only screen and (hover: none) and (pointer: coarse){
+    #game {
+        display: none;
+    }
+  }
