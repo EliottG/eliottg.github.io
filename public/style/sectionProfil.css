@@ -9,8 +9,9 @@
   font-size: 40px;
 }
 #sectionProfil div #profil-picture {
-  width: 30vh;
+  width: 27vh;
   border-radius: 200px;
+  border: 2px solid rgb(88, 88, 88);
 }
 #sectionProfil .profil-content {
   margin-left: 3%;
@@ -25,6 +26,7 @@
     margin-left: none;
   }
   #sectionProfil {
+    margin-top: 10%;
     flex-direction: column;
   }
 }

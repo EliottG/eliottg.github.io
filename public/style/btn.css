@@ -22,8 +22,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(209, 209, 209);
-  color: black;
+  background-color: rgb(255, 255, 255);
+  color: rgb(63, 63, 63);
 }
 .btn-contact img {
   margin-left: 10px;
