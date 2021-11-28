@@ -4,9 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="public/style/style.css" />
+    <link rel="stylesheet" href="public/style/header.css" />
+    <link rel="stylesheet" href="public/style/btn.css" />
+    <link rel="stylesheet" href="public/style/sectionProfil.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Eliott GDC</title>
   </head>
   <body>
-    En construction ...
+    <div onclick="updateAnimations()" class="btn" id="animations-disable">
+      Disable animations
+    </div>
+    <header>
+      <h1 class="opacity-anim">Welcome</h1>
+    </header>
+    <section id="sectionProfil">
+      <div>
+        <img
+          id="profil-picture"
+          alt="my-profil-picture"
+          src="public/img/profil.png"
+        />
+        <div class="profil-links">
+          <a target="_blank" href="https://www.linkedin.com/in/eliott-geoffroy/"
+            ><img src="public/img/github.png"
+          /></a>
+          <a target="_blank" href="https://github.com/EliottG"
+            ><img src="public/img/linkedin.png"
+          /></a>
+        </div>
+      </div>
+
+      <div class="profil-content">
+        <h2>Eliott</h2>
+        <h3>GEOFFROY DEUDON-COMBE</h3>
+        <h3>Web application developer</h3>
+
+        <a class="btn btn-contact" href="mailto:eliott.geoffroy@gmail.com"
+          >Contact me <img alt="contact-me" src="public/img/send.png" />
+        </a>
+      </div>
+    </section>
+    <script src="public/script/index.js"></script>
   </body>
 </html>

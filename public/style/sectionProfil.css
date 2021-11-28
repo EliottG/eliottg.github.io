@@ -1,0 +1,29 @@
+#sectionProfil {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sectionProfil h2 {
+  font-size: 40px;
+}
+#sectionProfil div #profil-picture {
+  width: 30vh;
+  border-radius: 200px;
+}
+#sectionProfil .profil-content {
+  margin-left: 3%;
+}
+.profil-links {
+  text-align: center;
+  margin: 3%;
+}
+
+@media screen and (max-width: 768px) {
+  #sectionProfil .profil-content {
+    margin-left: none;
+  }
+  #sectionProfil {
+    flex-direction: column;
+  }
+}
