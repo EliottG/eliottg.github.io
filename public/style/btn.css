@@ -18,14 +18,38 @@
   opacity: 0.9;
   transform: scale(0.99);
 }
-.btn-contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  color: rgb(63, 63, 63);
+.buttons-style {
+  display: inline-block;
+  padding: 2% 4%;
+  line-height: 1.42857143;
+  border-radius: 8px;
+  font-weight: bold;
 }
-.btn-contact img {
-  margin-left: 10px;
-  width: 30px;
+.buttons-style:hover {
+  opacity: 0.95;
+  cursor: pointer;
+}
+#btn-profil {
+  border: 2px solid rgb(238, 150, 68);
+  box-shadow: inset 1px 1px 10px 3px rgb(238, 150, 68),
+    1px 1px 10px 3px rgb(238, 150, 68);
+}
+.background-profil {
+  background-color: rgb(238, 150, 68);
+}
+.background-skill {
+  background-color: rgb(240, 90, 44);
+}
+.background-contact {
+  background-color: rgb(216, 28, 28);
+}
+#skills-profil {
+  border: 2px solid rgb(240, 90, 44);
+  box-shadow: inset 1px 1px 10px 3px rgb(240, 90, 44),
+    1px 1px 10px 3px rgb(240, 90, 44);
+}
+#contact-profil {
+  border: 2px solid rgb(216, 28, 28);
+  box-shadow: inset 1px 1px 10px 3px rgb(216, 28, 28),
+    1px 1px 10px 3px rgb(216, 28, 28);
 }

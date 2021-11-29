@@ -1,20 +1,21 @@
 header {
-  margin: 2% 0;
+  margin-top: 2%;
+  margin-bottom: 5%;
   text-align: center;
 }
 
 header h1 {
-  font-size: 32px;
+  font-size: 35px;
   display: inline-block;
   color: #fff;
   z-index: 2;
-  letter-spacing: 15px;
+  letter-spacing: 12px;
   filter: drop-shadow(0 1px 3px);
 }
 header h1::before {
   content: '';
   position: absolute;
-  background: rgb(151, 93, 17);
+  background: rgba(151, 93, 17, 0.63);
   top: 120%;
   left: 0;
   width: 100%;
