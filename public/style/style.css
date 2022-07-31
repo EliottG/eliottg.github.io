@@ -123,14 +123,16 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
   
   }
+  .card {
+    width: 80px;
+    height: 110px;
+    
+  }
 }
 
 @media screen and (max-width: 382px) {
  
-  #game-memory {
-    grid-template-columns: repeat(2, 1fr);
-  
-  }
+
 }
 
 

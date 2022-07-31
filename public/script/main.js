@@ -96,7 +96,7 @@ function displayCard(index) {
                 cards[compareTwo.index].classList.remove(card + compareTwo.icon); 
                 cards[compareOne.index].classList.remove(card + compareOne.icon);
                 loading = false;
-            }, 450)
+            }, 475)
         }
         
         selectedCards = [];
