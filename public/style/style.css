@@ -11,9 +11,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   flex-direction: column;
-
+  margin-top: 5%;
 }
 #game-memory {
   display: grid;
@@ -22,12 +21,44 @@ main {
 
 }
 
-button {
-  padding: 15px;
+#restart {
+  background-color: rgb(255, 255, 255);
+  padding: 7px 13px;
   border-radius: 10px;
-  transition: 0.2s ease-in;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: black;
+  gap: 10px;
+  transition: 0.3s ease-in-out;
+  border: 3px solid transparent;
+
 }
+
+#restart img {
+  width: 20px;
+}
+
+#about-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2%;
+}
+#restart:hover {
+  border: 3px solid rgb(77, 113, 160);
+  transform: scale(0.92);
+  opacity: 0.90;
+}
+
+#game-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 2%;
+  align-items: center;
+}
+
+
 
 button:hover {
   opacity: 0.9;
@@ -57,7 +88,7 @@ h2 {
 }
 .hidden::before {
   content: '';
-  background-color: rgb(54, 53, 53);
+  background-color: rgb(77, 113, 160);
   width: 20px;
   height: 120%;
   transform: rotate(45deg);

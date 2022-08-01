@@ -1,3 +1,4 @@
+
 let cards = document.querySelectorAll('.card');
 
 let cardsShuffle = [];
@@ -15,6 +16,9 @@ let modalFinish = document.getElementById('modal-finish');
 let loading = false;
 
 let main = document.querySelector('main');
+
+let restart = document.getElementById('restart');
+
 
 const card = 'card';
 
@@ -101,28 +105,56 @@ function displayCard(index) {
         
         selectedCards = [];
         if(cardsFound.length >= cardsShuffle.length) {
-            gameStatus.innerHTML = 'Partie terminée !'
+            gameStatus.innerHTML = 'Partie terminée'
         }
     } else {
         displayAnimation(index)
     }
     
 }
-
-for(let i = 0; i < cards.length / 2; i++) {
-    maxCards.push(i,i);
+setMaxCards = () => {
+    for(let i = 0; i < cards.length / 2; i++) {
+        maxCards.push(i,i);
+    }
 }
 
 
+startGame = (cards) => {
+    gameStatus.innerHTML = 'Partie en cours'
+    cards.forEach((card, index) => {
+        card.animate([
+            // étapes/keyframes
+            { transform: 'scaleX(0)' },
+            { transform: 'scaleX(0.5)' },
+            { transform: 'scaleX(0)' },
+            { transform: 'scaleX(1)' }
+          ], {
+            // temporisation
+            duration: 300,
+          });
 
-cards.forEach((card, index) => {
-    let cardIndex = getRandomInt(maxCards.length);
-    cardsShuffle.push({
-        index,
-        icon: maxCards[cardIndex]
+        let cardIndex = getRandomInt(maxCards.length);
+        cardsShuffle.push({
+            index,
+            icon: maxCards[cardIndex]
+        })
+        maxCards.splice(cardIndex, 1)
+    
+        card.addEventListener('click', () => displayCard(index))
+    })    
+}
+
+restart.addEventListener('click', () => {
+    cardsShuffle = [];
+    maxCards = [];
+    selectedCards = [];
+    cardsFound = [];
+    cards.forEach((card) => {
+        card.classList = 'card hidden'
     })
-    maxCards.splice(cardIndex, 1)
-
-    card.addEventListener('click', () => displayCard(index))
+    setMaxCards();
+    startGame(cards);
 })
 
+setMaxCards();
+startGame(cards);
