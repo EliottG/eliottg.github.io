@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Memory game - EliottG</title>
+  <title>Math Game</title>
   <link rel="stylesheet" href="public/style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,24 +18,13 @@
 <body>
     <main>
       <div id="game-bar">
-        <h3 id="game-status">Partie en cours</h3>
-        <div id="restart"><img src="./public/img/restart.png"></div>
+        <div id="start">Commencer la partie</div>
+        <h3 id="round"></h3>
       </div>
-      <section id="game-memory">
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>
-        <div class="card hidden"></div>       
+      <section id="game">
+       <div id="game-write"></div>
+        <input id="result" type="number" autofocus/>
       </section>
-      <!-- <a href="about-me.html" id="about-me">À propos de moi <img src="./public/img/arrow-right.png"></a> -->
     </main>
     
   <script src="public/script/main.js"></script>

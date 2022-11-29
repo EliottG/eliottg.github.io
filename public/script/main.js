@@ -1,160 +1,77 @@
 
-let cards = document.querySelectorAll('.card');
 
-let cardsShuffle = [];
+let gameWrite = document.getElementById('game-write');
+let start = document.getElementById('start');
 
-let maxCards = [];
+let result = document.getElementById('result');
+let round = document.getElementById('round');
+let secretResult = "secret";
 
-let selectedCards = [];
+let value = null;
+let number1 = null;
+let number2 = null;
+let sign = null;
 
-let cardsFound = [];
+let roundNumber = 1;
 
-let gameStatus = document.getElementById('game-status');
-
-let modalFinish = document.getElementById('modal-finish');
-
-let loading = false;
-
-let main = document.querySelector('main');
-
-let restart = document.getElementById('restart');
-
-
-const card = 'card';
-
-
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+const getRandomInt = (max)=> {
+    return Math.floor(Math.random() * max + 1);
 }
 
-function compareCards(selectedCards) {
-    return selectedCards[0].icon === selectedCards[1].icon
+const setNewNumbers = () => {
+    number1 = getRandomInt(9);
+    number2 = getRandomInt(9);
+    setSign();
+    gameWrite.innerHTML = `${number1} ${sign} ${number2}`
 }
 
-
-function displayAnimation(index) {
-    cards[index].animate([
-        // étapes/keyframes
-        { transform: 'scaleX(0)' },
-        { transform: 'scaleX(1)' }
-      ], {
-        // temporisation
-        duration: 300,
-      });
-}
-
-function foundAnimation(index) {
-    cards[index].animate([
-        // étapes/keyframes
-        { transform: 'scaleX(0)' },
-        { transform: 'scaleX(0.5)' },
-        { transform: 'scaleX(0)' },
-        { transform: 'scaleX(1)' }
-        
-
-
-    ], {
-        // temporisation
-        duration: 400,
-      });
-}
-
-function displayCard(index) {
-    if (loading || cardsFound.includes(index)) {
-        return
+const setSign = () => {
+    switch (getRandomInt(3)) {
+        case 1:
+            sign = "x"
+            secretResult = number1 * number2
+            break;
+        case 2:
+            sign = "-"
+            secretResult = number1 - number2
+            break;
+        case 3:
+            sign = '+'
+            secretResult = number1 + number2
+            break;
+        default:
+            sign = "x"
+            secretResult = number1 * number2
     }
-    
-    if (selectedCards[0] && selectedCards[0].index === index) {
-        return
-    }
+}
 
-    selectedCards.push(cardsShuffle[index])
-    cards[index].classList.add(card + cardsShuffle[index].icon);
-    cards[index].classList.remove('hidden');
-    
-    if (selectedCards.length >= 2) {
-        
-        let compareOne = selectedCards[0];
-        let compareTwo  = selectedCards[1];
-        
-        
+start.addEventListener('click',() => gameStart())
 
-        if(compareCards(selectedCards)) {
-            cards[compareOne.index].classList.add('found');
-            cards[compareTwo.index].classList.add('found');
-            
-            foundAnimation(compareOne.index);
-            foundAnimation(compareTwo.index);
-            cardsFound.push(compareOne.index,compareTwo.index);
-        } else {
-            displayAnimation(index)
-            loading = true;
-            
-            setTimeout(() => {
-                cards[compareOne.index].classList.add('hidden');
-                cards[compareTwo.index].classList.add('hidden');
-                  
-                displayAnimation(compareTwo.index)
-                displayAnimation(compareOne.index)
-                cards[compareTwo.index].classList.remove(card + compareTwo.icon); 
-                cards[compareOne.index].classList.remove(card + compareOne.icon);
-                loading = false;
-            }, 450)
+
+const gameStart = () => {
+    roundNumber = 1;
+    round.innerHTML = `Round ${roundNumber} / 40`;
+    start.innerHTML = "Recommencer"
+    setNewNumbers()
+}
+
+result.addEventListener("input", (event) => {
+     value = event.target.value
+     if (event.target.value == secretResult) {
+         roundNumber++;
+         round.innerHTML = `Round ${roundNumber} / 40`;
+        document.getElementById('result').value = "";
+        if (roundNumber >= 40 ) {
+            return gameEnd();
         }
-        
-        selectedCards = [];
-        if(cardsFound.length >= cardsShuffle.length) {
-            gameStatus.innerHTML = 'Partie terminée'
-        }
-    } else {
-        displayAnimation(index)
-    }
-    
-}
-setMaxCards = () => {
-    for(let i = 0; i < cards.length / 2; i++) {
-        maxCards.push(i,i);
-    }
-}
-
-
-startGame = (cards) => {
-    gameStatus.innerHTML = 'Partie en cours'
-    cards.forEach((card, index) => {
-        card.animate([
-            // étapes/keyframes
-            { transform: 'scaleX(0)' },
-            { transform: 'scaleX(0.5)' },
-            { transform: 'scaleX(0)' },
-            { transform: 'scaleX(1)' }
-          ], {
-            // temporisation
-            duration: 300,
-          });
-
-        let cardIndex = getRandomInt(maxCards.length);
-        cardsShuffle.push({
-            index,
-            icon: maxCards[cardIndex]
-        })
-        maxCards.splice(cardIndex, 1)
-    
-        card.addEventListener('click', () => displayCard(index))
-    })    
-}
-
-restart.addEventListener('click', () => {
-    cardsShuffle = [];
-    maxCards = [];
-    selectedCards = [];
-    cardsFound = [];
-    cards.forEach((card) => {
-        card.classList = 'card hidden'
-    })
-    setMaxCards();
-    startGame(cards);
+        setNewNumbers();
+     }
 })
 
-setMaxCards();
-startGame(cards);
+const gameEnd = () => {
+    round.innerHTML = `Partie terminée 40 / 40`;
+    gameWrite.innerHTML  = "";
+    number1 = null;
+    number2 = null;
+    secretResult = "secret"
+}
