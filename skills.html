@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eliott Geoffroy Deudon-Combe</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="skills.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="go-back-link" href="./index.html"><img  src="./assets/icons/go-back.svg" />Go home</a>
+    <div class="container">
+      <div class="skills">
+        <div class="skill" id="frontend" onclick="handleClickSkill('frontend')">
+          <img class="skills-icon" src="./assets/icons/laptop.svg" />
+          <span class="skills-title">FRONTEND</span>
+          <div class="skill-content">
+              <div  class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/git.svg" /> Git</div>
+              <div class="skill-content-line"><img  class="skill-content-icon" src="./assets/icons/typescript.svg" /> TS / JS</div>
+              <div class="skill-content-line"><img  class="skill-content-icon" src="./assets/icons/react.svg" />React JS / Native</div>
+              <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/sass.svg" />Sass</div>
+              <div class="skill-content-line"><img  class="skill-content-icon"  src="./assets/icons/storybook.svg" />Storybook</div>
+              <div class="skill-content-line"><img  class="skill-content-icon"  src="./assets/icons/bootstrap.svg" />Bootstrap</div>
+              <div class="skill-content-line"><img  class="skill-content-icon"  src="./assets/icons/tailwind.svg" />Tailwind</div>
+
+            </ul> 
+          </div>
+        </div>
+        <div class="skill" id="backend" onclick="handleClickSkill('backend')">
+          <img class="skills-icon" src="./assets/icons/server.svg" />
+          <span class="skills-title" >BACKEND</span>
+          <div class="skill-content">
+            <div  class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/git.svg" /> Git</div>
+            <div class="skill-content-line"><img  class="skill-content-icon" src="./assets/icons/php.svg" /> PHP</div>
+            <div class="skill-content-line"><img  class="skill-content-icon" src="./assets/icons/symfony.svg" />Symfony</div>
+            <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/docker.svg" />Docker</div>
+            <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/python.svg" />Python</div>
+            <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/java.svg" />Java</div>
+            <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/api.svg" />API</div>
+
+
+        </div>
+        </div>
+        <div class="skill" id="salesforce" onclick="handleClickSkill('salesforce')">
+            <img class="skills-icon" src="./assets/icons/salesforce.svg" />
+            <span class="skills-title">SALESFORCE</span>
+            <div class="skill-content"> 
+              <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/admin.svg" />Admin</div>
+              <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/flow.svg" />Flows</div>
+              <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/apex.svg" />Apex</div>
+              <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/lwc.svg" />LWC</div>
+              <div class="skill-content-line"><img class="skill-content-icon" src="./assets/icons/validation.svg" />Validation rules</div>
+
+
+  
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./skills.js"></script>
+</html>
