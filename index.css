@@ -141,7 +141,7 @@ a.link:hover img.arrow-right {
   width: 2em;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 840px) {
   .container {
     height: 100%;
     width: 100%;

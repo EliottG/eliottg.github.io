@@ -15,8 +15,8 @@
     flex-direction: column;
     align-items: center;
     background-color: #3a3a3a;
-    width: 13em;
-    min-height: 17em;
+    width: 15em;
+    min-height: 18.5em;
     padding: 10px;
     font-weight: 600;
     border-radius: 10px;
@@ -24,7 +24,6 @@
     transition: all 0.3s ease-in-out;
 }
 .skill:hover {
-    transform: scale(1.1);
     opacity: 1;
     cursor: pointer;
 }
@@ -60,6 +59,9 @@
     height: 100%;
     animation: fade-in 1s ease forwards;
 }
+
+
+
 
 .skill-content-icon {
     width: 1.5em;
