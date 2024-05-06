@@ -1,8 +1,10 @@
 video {
     width: 25em;
+    animation: fade-in 1s ease forwards;
     height: 25em;
 }
 .nurseboard-explainations {
+    animation: fade-in 1s ease forwards;
     width: 25em;
     padding-left: 2em;
     text-align: left;

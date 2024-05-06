@@ -21,7 +21,7 @@ flag.classList.add("selected");
 
 const translations = {
   en: {
-    indexSubtitle: "Constantly seeking optimization.",
+    indexSubtitle: "Constantly seeking optimization",
     indexAboutMe: "About-me",
     indexCompetencies: "My Competencies",
     indexMyWork: "My Work",
@@ -44,7 +44,7 @@ const translations = {
       "Therefore, my role was to design an intuitive and functional user interface while ensuring seamless integration with the backend functionalities to provide a smooth and consistent user experience.",
   },
   fr: {
-    indexSubtitle: "En recherche constante d'optimisation.",
+    indexSubtitle: "En recherche constante d'optimisation",
     indexAboutMe: "À propos de moi",
     indexCompetencies: "Mes compétences",
     indexMyWork: "Mon travail",

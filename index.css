@@ -16,6 +16,10 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
+.separator {
+  border: 1px solid #343434;
+  width: 100%;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -31,7 +35,8 @@ body, html {
 
 h1 {
   font-size: 1em; 
-  margin-bottom: 5;
+  margin-bottom: 5px;
+  width: 100%;
 }
 h2 {
   margin-top: 0;
@@ -39,7 +44,8 @@ h2 {
 
   margin-bottom: 10;
 }
-.go-back-link {
+
+.go-back-link{
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -70,12 +76,13 @@ h2 {
 }
 .header-contact {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
+  gap: 20px;
 }
 .header-contact a img {
   opacity: 0.9;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 5px;
   border-radius: 10px;
   width: 2.5em;
@@ -83,7 +90,6 @@ h2 {
 }
 .header-contact a img:hover{
   opacity: 1;
-  transform: scale(1.05);
 }
 
 @keyframes fade-in {
@@ -135,9 +141,7 @@ a.link:hover img.arrow-right {
 
 
 
-.go-back-link {
-  flex: 1;
-}
+
 .go-back-link img {
   width: 2em;
 }
