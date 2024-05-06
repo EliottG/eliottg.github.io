@@ -15,22 +15,39 @@
     />
   </head>
   <body>
+    <div class="locale-switch">
+      <a href="?locale=fr">
+        <img id="fr" src="./assets/icons/france.svg" alt="France icon" />
+      </a>
+      <a href="?locale=en">
+        <img
+          id="en"
+          href="?locale=en"
+          src="./assets/icons/england.svg"
+          alt="France icon"
+        />
+      </a>
+    </div>
     <a class="go-back-link" href="./index.html"
-      ><img class="skill-content-icon" src="./assets/icons/go-back.svg" />Go
-      home</a
+      ><img class="skill-content-icon" src="./assets/icons/go-back.svg" /><span
+        data-translate="goBack"
+        >Go home</span
+      ></a
     >
     <div class="container">
       <div class="nurseboard-explainations">
         <h2>Nurseboard</h2>
-        <p>
+        <p data-translate="nurseboardPar1">
           My final year project focuses on developing a mobile application for
           independent nurses, aiming to simplify patient management within their
           teams. In this project, I took full responsibility for the frontend
-          interface development, using React Native technology. <br />
-          <br />The backend, on the other hand, was developed in Java with
-          Spring Boot.
+          interface development, using React Native technology.
         </p>
-        <p>
+        <p data-translate="nurseboardPar2">
+          The backend, on the other hand, was developed in Java with Spring
+          Boot.
+        </p>
+        <p data-translate="nurseboardPar3">
           Therefore, my role was to design an intuitive and functional user
           interface while ensuring seamless integration with the backend
           functionalities to provide a smooth and consistent user experience.
@@ -41,5 +58,6 @@
         Your browser does not support the video tag.
       </video>
     </div>
+    <script src="./switchLocale.js"></script>
   </body>
 </html>

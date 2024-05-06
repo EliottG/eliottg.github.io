@@ -13,10 +13,23 @@
     />
   </head>
   <body>
+    <div class="locale-switch">
+      <a href="?locale=fr">
+        <img id="fr" src="./assets/icons/france.svg" alt="France icon" />
+      </a>
+      <a href="?locale=en">
+        <img
+          id="en"
+          href="?locale=en"
+          src="./assets/icons/england.svg"
+          alt="France icon"
+        />
+      </a>
+    </div>
     <div class="container">
       <div class="header">
         <h1>Eliott GEOFFROY DEUDON-COMBE</h1>
-        <h2>Constantly seeking optimization</h2>
+        <h2 data-translate="indexSubtitle">Constantly seeking optimization</h2>
         <div class="header-contact">
           <a href="https://www.linkedin.com/in/eliott-geoffroy/" target="_blank"
             ><img src="./assets/icons/linkedin.svg"
@@ -32,19 +45,20 @@
         </div>
       </div>
       <div class="links">
-        <a class="link" href="about.html"
+        <a class="link" data-translate="indexAboutMe" href="about.html"
           >About-me
           <img class="arrow-right" src="./assets/icons/arrow-right.svg"
         /></a>
-        <a class="link" href="skills.html"
+        <a class="link" data-translate="indexCompetencies" href="skills.html"
           >My Competencies
           <img class="arrow-right" src="./assets/icons/arrow-right.svg"
         /></a>
-        <a class="link" href="work.html"
+        <a class="link" data-translate="indexMyWork" href="work.html"
           >My Work
           <img class="arrow-right" src="./assets/icons/arrow-right.svg"
         /></a>
       </div>
     </div>
+    <script src="./switchLocale.js"></script>
   </body>
 </html>
