@@ -16,19 +16,21 @@
   </head>
   <body>
     <div class="locale-switch">
-      <a href="?locale=fr">
-        <img id="fr" src="./assets/icons/france.svg" alt="France icon" />
-      </a>
-      <a href="?locale=en">
-        <img
-          id="en"
-          href="?locale=en"
-          src="./assets/icons/england.svg"
-          alt="France icon"
-        />
-      </a>
+      <img
+        id="fr"
+        onclick="switchLocale('fr')"
+        src="./assets/icons/france.svg"
+        alt="France icon"
+      />
+      <img
+        id="en"
+        onclick="switchLocale('en')"
+        href="?locale=en"
+        src="./assets/icons/england.svg"
+        alt="France icon"
+      />
     </div>
-    <a class="go-back-link"  href="./index.html"><img  src="./assets/icons/go-back.svg" /><span data-translate="goBack">Go home</span></a>
+    <a class="go-back-link" rel="keep-params"  href="./index.html"><img  src="./assets/icons/go-back.svg" /><span data-translate="goBack">Go home</span></a>
     <div class="container">
       <div class="skills">
         <div class="skill" id="frontend" onclick="handleClickSkill('frontend')">

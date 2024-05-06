@@ -14,17 +14,19 @@
   </head>
   <body>
     <div class="locale-switch">
-      <a href="?locale=fr">
-        <img id="fr" src="./assets/icons/france.svg" alt="France icon" />
-      </a>
-      <a href="?locale=en">
-        <img
-          id="en"
-          href="?locale=en"
-          src="./assets/icons/england.svg"
-          alt="France icon"
-        />
-      </a>
+      <img
+        id="fr"
+        onclick="switchLocale('fr')"
+        src="./assets/icons/france.svg"
+        alt="France icon"
+      />
+      <img
+        id="en"
+        onclick="switchLocale('en')"
+        href="?locale=en"
+        src="./assets/icons/england.svg"
+        alt="France icon"
+      />
     </div>
     <div class="container">
       <div class="header">
@@ -45,15 +47,27 @@
         </div>
       </div>
       <div class="links">
-        <a class="link" data-translate="indexAboutMe" href="about.html"
+        <a
+          rel="keep-params"
+          class="link"
+          data-translate="indexAboutMe"
+          href="about.html"
           >About-me
           <img class="arrow-right" src="./assets/icons/arrow-right.svg"
         /></a>
-        <a class="link" data-translate="indexCompetencies" href="skills.html"
+        <a
+          rel="keep-params"
+          class="link"
+          data-translate="indexCompetencies"
+          href="skills.html"
           >My Competencies
           <img class="arrow-right" src="./assets/icons/arrow-right.svg"
         /></a>
-        <a class="link" data-translate="indexMyWork" href="work.html"
+        <a
+          rel="keep-params"
+          class="link"
+          data-translate="indexMyWork"
+          href="work.html"
           >My Work
           <img class="arrow-right" src="./assets/icons/arrow-right.svg"
         /></a>

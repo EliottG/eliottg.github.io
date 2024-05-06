@@ -4,15 +4,21 @@ const uri = window.location.pathname;
 // Récupérer la locale de l'utilisateur
 let currentLocale = navigator.language || navigator.userLanguage;
 
-// Récupérer le paramètre de langue de l'URL
-const searchParams = new URLSearchParams(window.location.search);
-const urlLocale = searchParams.get("locale");
+switchLocale = (param) => {
+  const currentLocale = sessionStorage.getItem("locale");
+  if (currentLocale != param) {
+    sessionStorage.setItem("locale", param);
+  }
+  window.location.reload();
+};
 
-// Déterminer la locale à utiliser
-const locale = urlLocale || (currentLocale.startsWith("fr") ? "fr" : "en");
+const locale =
+  sessionStorage.getItem("locale") ||
+  (currentLocale.startsWith("fr") ? "fr" : "en");
 
 const flag = document.getElementById(locale);
 flag.classList.add("selected");
+
 const translations = {
   en: {
     indexSubtitle: "Constantly seeking optimization.",
